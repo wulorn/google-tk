@@ -12,5 +12,7 @@ import "github.com/wulorn/google-tk"
 tkk, _ := tk.GetTKK()
 # 根据tk值解析出请求需要携带的tk值
 tk := tk.GetTK("queryString", tkk)
-buf := 
+
+# 直接调用api接口 返回 []byte, err
+buf, err := tk.Translate("queryString")
 ```
